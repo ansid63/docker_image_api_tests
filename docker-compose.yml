@@ -1,0 +1,9 @@
+version: "3.1"
+services:
+  os:
+    build: os/
+    container_name: os_ubuntu
+  launch: 
+    build: .
+    container_name: tests
+    command: pytest -sv ./test_query_graphql.py
